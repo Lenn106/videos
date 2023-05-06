@@ -4,6 +4,27 @@
 <head>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap">
   <style>
+    /* CSS for the black menu */
+    #bottom-menu {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: black;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    /* CSS for the menu buttons */
+    #bottom-menu a {
+      margin: 5px;
+      padding: 10px 20px;
+      color: white;
+      text-decoration: none;
+      border: none; /* Remove button outlines */
+      border-radius: 5px;
+      font-family: 'Nunito', sans-serif; /* Use Nunito font */
+    }
+
     body, html {
       height: 100%;
       margin: 0;
@@ -71,6 +92,78 @@
     .download-link:hover span {
       display: block;
     }
+
+    .success-message {
+      display: none;
+      position: fixed;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      font-size: 18px;
+      font-family: 'Nunito', sans-serif;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+
+    /* Added styles for confirmation popup */
+    .confirmation-popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: 1;
+    }
+
+    .confirmation-popup-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.9);
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      font-family: 'Nunito', sans-serif;
+      color: white;
+    }
+
+    .confirmation-popup-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      color: white;
+      font-size: 24px;
+    }
+
+    /* Added styles for confirmation popup buttons */
+    .confirmation-popup-buttons {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .confirmation-popup-buttons button {
+      background-color: rgba(255, 255, 255, 0.1);
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      margin: 0 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-family: 'Nunito', sans-serif;
+      font-size: 18px;
+    }
+
+    .confirmation-popup-buttons button:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
   </style>
 </head>
 
@@ -81,11 +174,60 @@
     </a>
     <h1>I-Tools</h1>
     <p>One of the best i-Ready Hacks to date.</p>
-    <a class="download-link" href="https://tinypic.host/images/2023/05/06/icon.png">
+    <a class="download-link" href="https://mega.nz/folder/hq5RACSB#aBlXftjFwbeUxWf3o-xDUA">
       <img src="https://tinypic.host/images/2023/05/06/icon.png" alt="icon.png" border="0" />
       <span>Download</span>
     </a>
   </div>
+  <div class="confirmation-popup">
+    <div class="confirmation-popup-content">
+      <h2>Do you want to see the tutorial?</h2>
+      <div class="confirmation-popup-buttons">
+        <button id="yes-button">Yes</button>
+        <button id="no-button">No</button>
+      </div>
+      <span class="confirmation-popup-close">&times;</span>
+    </div>
+  </div>
+  <script>
+    const downloadLink = document.querySelector('.download-link');
+    const confirmationPopup = document.querySelector('.confirmation-popup');
+    const confirmationPopupClose = document.querySelector('.confirmation-popup-close');
+    const yesButton = document.querySelector('#yes-button');
+    const noButton = document.querySelector('#no-button');
+
+    downloadLink.addEventListener('click', (event) => {
+      event.preventDefault();
+      confirmationPopup.style.display = 'block';
+    });
+
+    confirmationPopupClose.addEventListener('click', () => {
+      const url = downloadLink.getAttribute('href');
+      const link = document.createElement('a');
+      link.href = url;
+      link.target = '_blank';
+      link.click();
+      confirmationPopup.style.display = 'none';
+    });
+
+    noButton.addEventListener('click', () => {
+      const url = downloadLink.getAttribute('href');
+      const link = document.createElement('a');
+      link.href = url;
+      link.target = '_blank';
+      link.click();
+      confirmationPopup.style.display = 'none';
+    });
+
+    yesButton.addEventListener('click', () => {
+      const tutorialLink = 'https://www.youtube.com/watch?v=deFT3gpXfAk&ab_channel=Lenn106';
+      const tutorial = document.createElement('a');
+      tutorial.href = tutorialLink;
+      tutorial.target = '_blank';
+      tutorial.click();
+      confirmationPopup.style.display = 'none';
+    });
+  </script>
 </body>
 
 </html>
