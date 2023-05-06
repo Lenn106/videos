@@ -1,6 +1,6 @@
 # I-Tools
 I-Ready Hacks
-Simply Open https://tools.github.io and download the files!
+simply open https://tools.github.io and download the files!
 
 Youtube Tutorial: https://www.youtube.com/watch?v=deFT3gpXfAk&ab_channel=Lenn106
 
