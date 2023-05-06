@@ -1,45 +1,85 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>SineWize</title>
-    <link rel="icon" href="icon.png" type="image/png">
-    <style>
-      @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300, 400");
-      @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
-      iframe {
-        position:absolute;
-        top:-150px;
-        border:none;
-      }
-      body {
-        background-color: #935d8c;
-        background-image: url(https://optifinesource.co.uk/assets/img/overlay.png), linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
-        font-weight: 300;
-        background-attachment: fixed;
-      }
-      html,*{
-        color: white;
-        border-color: white;
-        background-color:rgba(0,0,0,0);
-        transition: .3s ease-out;
-        outline:none;
-      }
-      div {
-        border: 1px solid white;
-        border-radius:10px;
-      }
-    </style>
-  </head>
-  <body>
-    <iframe id="iframe" src="https://autologout.linewize.net/"></iframe>
-    <h1>This Is SineWize Home Page!</h1>
-    <p>Keep me open for unblock</p>
-  </body>
-  <script type="text/javascript">
-    function test() {
-      document.getElementById('iframe').src="https://autologout.linewize.net/?"+new Date().getTime();
-      setTimeout(function(){test()},2000);
+
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap">
+  <style>
+    body {
+      background-image: url("https://tinypic.host/images/2023/05/06/OptimalConcernedAustralianfreshwatercrocodile-max-1mb.gif");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
     }
-    test();
-  </script>
+
+    .container {
+      text-align: center;
+      padding-top: 100px;
+      color: white;
+      font-family: 'Nunito', sans-serif;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .discord-logo {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 60px;
+      cursor: pointer;
+    }
+
+    .download-link {
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      color: white;
+      position: relative;
+    }
+
+    .download-link img {
+      width: 100px;
+    }
+
+    .download-link span {
+      display: none;
+      position: absolute;
+      bottom: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 5px 10px;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      font-size: 14px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+
+    .download-link:hover span {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <a href="https://discord.gg/PDRTFTHQnA" target="_blank">
+      <img class="discord-logo" src="https://tinypic.host/images/2023/05/06/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png" alt="636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png" border="0" />
+    </a>
+    <h1>I-Tools</h1>
+    <p>One of the best i-Ready Hacks to date.</p>
+    <a class="download-link" href="https://tinypic.host/images/2023/05/06/icon.png">
+      <img src="https://tinypic.host/images/2023/05/06/icon.png" alt="icon.png" border="0" />
+      <span>Download</span>
+    </a>
+  </div>
+</body>
+
 </html>
