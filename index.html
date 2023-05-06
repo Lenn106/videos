@@ -1,212 +1,160 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap">
   <style>
-    body, html {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      background-image: url("https://tinypic.host/images/2023/05/06/OptimalConcernedAustralianfreshwatercrocodile-max-1mb.gif");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-    }
-
-    .container {
-      text-align: center;
-      padding-top: 100px;
-      color: white;
+    /* New styles for menu */
+    .menu {
+      background-color: rgba(0, 0, 0, 0.7);
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 80px; /* increased height to fix blank spots */
+      display: flex;
+      justify-content: center;
+      align-items: center; /* centered menu items vertically */
+      z-index: 2;
       font-family: 'Nunito', sans-serif;
     }
 
-    h1 {
-      font-size: 48px;
+    .menu a {
+      color: white;
+      font-size: 18px;
+      text-decoration: none;
+      padding: 10px;
+    }
+
+    .menu a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .container {
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 190px;
+      text-align: center;
+      box-sizing: border-box;
+      font-family: 'Nunito', sans-serif;
+    }
+
+    .container img {
+      max-width: 80px;
+      height: auto;
+    }
+
+    .logo {
+      max-width: 100px;
+      height: auto;
       margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 36px;
+      font-weight: 700;
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-family: 'Nunito', sans-serif;
+      color: white;
     }
 
     p {
       font-size: 24px;
-      margin-bottom: 20px;
-    }
-
-    .discord-logo {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      width: 60px;
-      cursor: pointer;
+      font-weight: 400;
+      margin-top: 20px;
+      color: white;
+      font-family: 'Nunito', sans-serif;
     }
 
     .download-link {
-      display: inline-block;
-      margin-top: 10px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 40px;
+      padding: 5px;
+      background-color: #007bff;
+      color: #fff;
+      border-radius: 5px;
       text-decoration: none;
-      color: white;
-      position: relative;
+      font-family: 'Nunito', sans-serif;
+      cursor: pointer; /* added cursor pointer to download link */
     }
 
     .download-link img {
-      width: 100px;
+      margin-right: 10px;
+      height: 50px; /* changed height of download button logo */
+      width: auto;
     }
 
-    .download-link span {
-      display: none;
-      position: absolute;
-      bottom: -30px;
-      left: 50%;
-      transform: translateX(-50%);
-      padding: 5px 10px;
-      background-color: rgba(0, 0, 0, 0.7);
-      color: white;
-      font-size: 14px;
-      border-radius: 4px;
-      white-space: nowrap;
-    }
-
-    .download-link:hover span {
-      display: block;
-    }
-
-    .success-message {
-      display: none;
-      position: fixed;
-      top: 10px;
-      left: 50%;
-      transform: translateX(-50%);
-      padding: 10px;
-      background-color: rgba(0, 0, 0, 0.7);
-      color: white;
-      font-size: 18px;
-      font-family: 'Nunito', sans-serif;
-      border-radius: 4px;
-      white-space: nowrap;
-    }
-
-    /* Added styles for confirmation popup */
-    .confirmation-popup {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.7);
-      z-index: 1;
-    }
-
-    .confirmation-popup-content {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: rgba(0, 0, 0, 0.9);
-      padding: 20px;
-      border-radius: 10px;
-      text-align: center;
-      font-family: 'Nunito', sans-serif;
-      color: white;
-    }
-
-    .confirmation-popup-close {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      cursor: pointer;
-      color: white;
+    span {
       font-size: 24px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
-    /* Added styles for confirmation popup buttons */
-    .confirmation-popup-buttons {
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
-    }
-
-    .confirmation-popup-buttons button {
-      background-color: rgba(255, 255, 255, 0.1);
-      border: none;
-      color: white;
-      padding: 10px 20px;
-      margin: 0 10px;
-      border-radius: 4px;
+    .discord-logo {
+      max-width: 80px;
+      height: auto;
+      position: absolute;
+      top: 10px;
+      left: 10px;
       cursor: pointer;
-      font-family: 'Nunito', sans-serif;
-      font-size: 18px;
     }
 
-    .confirmation-popup-buttons button:hover {
-      background-color: rgba(255, 255, 255, 0.2);
+    body {
+      background-image: url('https://tinypic.host/images/2023/05/06/OptimalConcernedAustralianfreshwatercrocodile-max-1mb.gif');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: 0; /* removed default margin */
+      font-family: 'Nunito', sans-serif;
+    }
+
+    /* Added styles for menu placeholders */
+    @media only screen and (max-width: 768px) {
+      .menu {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        padding: 5px;
+        background-color: rgba(0, 0, 0, 0.7);
+        font-family: 'Nunito', sans-serif;
+        height: 60px; /* adjusted height for smaller screens */
+      }
     }
   </style>
-</head>
-
-<body>
-  <div class="container">
-    <a href="https://discord.gg/PDRTFTHQnA" target="_blank">
-      <img class="discord-logo" src="https://tinypic.host/images/2023/05/06/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png" alt="636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png" border="0" />
-    </a>
-    <h1>I-Tools</h1>
-    <p>One of the best i-Ready Hacks to date.</p>
-    <a class="download-link" href="https://mega.nz/folder/hq5RACSB#aBlXftjFwbeUxWf3o-xDUA">
-      <img src="https://tinypic.host/images/2023/05/06/icon.png" alt="icon.png" border="0" />
-      <span>Download</span>
-    </a>
-  </div>
-  <div class="confirmation-popup">
-    <div class="confirmation-popup-content">
-      <h2>Do you want to see the tutorial?</h2>
-      <div class="confirmation-popup-buttons">
-        <button id="yes-button">Yes</button>
-        <button id="no-button">No</button>
-      </div>
-      <span class="confirmation-popup-close">&times;</span>
-    </div>
-  </div>
   <script>
-    const downloadLink = document.querySelector('.download-link');
-    const confirmationPopup = document.querySelector('.confirmation-popup');
-    const confirmationPopupClose = document.querySelector('.confirmation-popup-close');
-    const yesButton = document.querySelector('#yes-button');
-    const noButton = document.querySelector('#no-button');
+    // Add event listener to download button
+    document.addEventListener('DOMContentLoaded', function() {
+      const downloadBtn = document.querySelector('.download-link');
 
-    downloadLink.addEventListener('click', (event) => {
-      event.preventDefault();
-      confirmationPopup.style.display = 'block';
-    });
-
-    confirmationPopupClose.addEventListener('click', () => {
-      const url = downloadLink.getAttribute('href');
-      const link = document.createElement('a');
-      link.href = url;
-      link.target = '_blank';
-      link.click();
-      confirmationPopup.style.display = 'none';
-    });
-
-    noButton.addEventListener('click', () => {
-      const url = downloadLink.getAttribute('href');
-      const link = document.createElement('a');
-      link.href = url;
-      link.target = '_blank';
-      link.click();
-      confirmationPopup.style.display = 'none';
-    });
-
-    yesButton.addEventListener('click', () => {
-      const tutorialLink = 'https://www.youtube.com/watch?v=deFT3gpXfAk&ab_channel=Lenn106';
-      const tutorial = document.createElement('a');
-      tutorial.href = tutorialLink;
-      tutorial.target = '_blank';
-      tutorial.click();
-      confirmationPopup.style.display = 'none';
+      downloadBtn.addEventListener('click', function() {
+        window.open('https://mega.nz/folder/hq5RACSB#aBlXftjFwbeUxWf3o-xDUA', '_blank'); // open link in new tab
+      });
     });
   </script>
+</head>
+<body>
+  <a href="https://discord.com/invite/PDRTFTHQnA" target="_blank">
+    <img class="discord-logo" src="https://tinypic.host/images/2023/05/06/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png" alt="Discord Logo" border="0" />
+  </a>
+  <div class="menu">
+    <a href="https://www.youtube.com/watch?v=deFT3gpXfAk&ab_channel=Lenn106" target="_blank">Tutorial</a> 
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf6WDRaGap9UZkQiuQz3bUdKhlpyowvHIDEyrGjaqbq2KTs8w/viewform" target="_blank">Join Our Staff</a>
+    <a href="https://github.com/Lenn106" target="_blank">My GitHub</a> 
+  </div>
+  <div class="container">
+    <img class="logo" src="https://tinypic.host/images/2023/05/06/icon.png" alt="Logo" border="0" />
+    <h1>i-Tools</h1>
+    <p>i-Tools eliminates the stress and agony that comes with i-Ready. </p>
+    <a href="#" class="download-link">
+      <img src="https://tinypic.host/images/2023/05/06/icon.png" alt="Download Icon" />
+      <span>Download Now</span>
+    </a>
+  </div>
 </body>
-
 </html>
