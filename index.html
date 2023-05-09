@@ -143,11 +143,6 @@
   </style>
   <script>
     
-function() {
-      // Display the message on page load
-      window.addEventListener('load', function() {
-        console.log("Hi. You like to look under the hood? Sign up for Developer on our applications! It's only me on this team, you know.")
-
     // Add event listener to download button
     document.addEventListener('DOMContentLoaded', function() {
       const downloadBtn = document.querySelector('.download-link');
@@ -162,6 +157,14 @@ function() {
       const audio = new Audio('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3');
       audio.play();
     };
+    
+    // Wrap the code in a self-contained function
+    (function() {
+      // Display the message on page load
+      window.addEventListener('load', function() {
+        console.log("Hi. You like to look under the hood? Sign up for Developer on our applications! It's only me on this team, you know. :(");
+      });
+    })(
   </script>
 </head>
 <body>
