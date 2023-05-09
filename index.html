@@ -142,20 +142,10 @@
     }
   </style>
   <script>
-  
-   // Override the default console.log function to capture logs
-    (function() {
-      var oldLog = console.log;
-      console.log = function(message) {
-        var consoleDiv = document.getElementById('console');
-        consoleDiv.innerHTML += '<p>' + message + '</p>';
-        oldLog.apply(console, arguments);
-      };
-    })();
+    
+  console.log("Hi. You like to look under the hood? Sign up for Developer on our applications! It's only me on this team, you know.");
+})();
 
-    // Log message displayed on page load
-    console.log("Hi. You like to look under the hood? Sign up for Developer on our applications! It's only me on this team, you know. :(");
-  
     // Add event listener to download button
     document.addEventListener('DOMContentLoaded', function() {
       const downloadBtn = document.querySelector('.download-link');
