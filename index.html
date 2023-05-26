@@ -24,12 +24,15 @@
     }
 
     .header .back-button {
-      display: flex;
-      align-items: center;
-      color: #ffffff;
-      text-decoration: none;
+      background: transparent;
+      border: none;
+      padding: 0;
       margin-right: 10px;
       cursor: pointer;
+      width: 24px;
+      height: 24px;
+      background-image: url("https://o.remove.bg/downloads/0910a088-da72-449a-ae91-4030645458ce/image-removebg-preview.png");
+      background-size: cover;
     }
 
     h1 {
@@ -62,13 +65,17 @@
 
     .project p {
       margin-bottom: 10px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .project a {
-      display: block;
       text-decoration: none;
       color: #ffffff;
       font-weight: bold;
+      margin-right: 10px;
+      margin-bottom: 5px;
     }
 
     .invisible {
@@ -79,28 +86,37 @@
 
 <body>
   <div class="header">
-    <a href="https://lenn106.github.io" class="back-button">Back</a>
+    <button class="back-button" onclick="window.location.href = 'https://lenn106.github.io'"></button>
     <h1>GitHub Projects</h1>
   </div>
   <div class="container">
     <div class="project">
-      <h2>Project 1</h2>
-      <p>This is a description of project 1.</p>
-      <a href="https://github.com/project1" target="_blank">View on GitHub</a>
+      <h2>NeoMenu</h2>
+      <p>A now patched i-Ready hack that I developed on my own. The only use of its repository today is for UI.</p>
+      <div>
+        <a href="https://github.com/Lenn106/NeoMenu" target="_blank">View on GitHub</a>
+        <a href="https://lenn106.github.io/NeoMenu" target="_blank">Project Website</a>
+      </div>
     </div>
   </div>
   <div class="container">
     <div class="project">
-      <h2>Project 2</h2>
-      <p>This is a description of project 2.</p>
-      <a href="https://github.com/project2" target="_blank">View on GitHub</a>
+      <h2>Hackwize</h2>
+      <p>A set of tools used to break and bypass Linewize for unrestricted computer access at school.</p>
+      <div>
+        <a href="https://github.com/Lenn106/Hackwize" target="_blank">View on GitHub</a>
+        <a href="https://lenn106.github.io/Hackwize" target="_blank">View Project Website</a>
+      </div>
     </div>
   </div>
   <div class="container">
     <div class="project">
-      <h2>Project 3</h2>
-      <p>This is a description of project 3.</p>
-      <a href="https://github.com/project3" target="_blank">View on GitHub</a>
+      <h2>Edu News</h2>
+      <p>A unblocked games website similar to fishme.me. Click the word "problems" on article 1.</p>
+      <div>
+        <a href="https://github.com/Lenn106/Edu-News" target="_blank">View on GitHub</a>
+        <a href="https://lenn106.github.io/Edu-News" target="_blank">Project Website</a>
+      </div>
     </div>
   </div>
 </body>
