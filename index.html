@@ -1,124 +1,143 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lenn106 - GitHub Projects</title>
+  <title>Girl Screaming Meme Maker</title>
   <style>
     body {
-      background-image: url("https://images.unsplash.com/photo-1499623838158-29acea518eaa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80");
-      background-size: cover;
-      background-position: center;
-      color: #ffffff;
+      text-align: right;
       font-family: Arial, sans-serif;
-      margin: 0;
+      background-color: #111111;
+      margin-top: 100px;
     }
-
-    .header {
-      background-color: #323232;
-      padding: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .header .back-button {
-      background: transparent;
-      border: none;
-      padding: 0;
-      margin-right: 10px;
-      cursor: pointer;
-      width: 24px;
-      height: 24px;
-      background-image: url("https://tinypic.host/images/2023/05/27/image-removebg-preview-1.png");
-      background-size: cover;
-    }
-
+    
     h1 {
-      padding: 20px;
-      background-color: #323232;
+      font-size: 24px;
       color: #ffffff;
-      margin: 0;
+      margin-bottom: 20px;
+      text-align: right;
+    }
+    
+    .video-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+    
+    .video {
+      width: 360px;
+      height: 202px;
+      border: 2px solid #ffffff;
+      border-radius: 8px;
+      align-self: flex-end;
+    }
+    
+    .clip-title {
+      font-size: 18px;
+      margin-top: 10px;
+      color: #ffffff;
       text-align: center;
     }
-
-    .container {
+    
+    .button-container {
       display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      padding: 40px;
+      justify-content: right;
+      align-items: center;
+      margin-top: 40px;
     }
-
-    .project {
-      margin-bottom: 30px;
-      background-color: #323232;
-      border-radius: 10px;
-      padding: 20px;
-      max-width: 800px;
-      width: 100%;
-    }
-
-    .project h2 {
-      margin-top: 0;
-    }
-
-    .project p {
-      margin-bottom: 10px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    .project a {
-      text-decoration: none;
-      color: #ffffff;
+    
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      font-size: 18px;
       font-weight: bold;
-      margin-right: 10px;
-      margin-bottom: 5px;
+      color: #ffffff;
+      background-color: #333333;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
     }
-
-    .invisible {
-      user-select: none;
+    
+    .btn:hover {
+      background-color: #555555;
+    }
+    
+    .upload-button {
+      display: inline-block;
+      padding: 12px 24px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #ffffff;
+      background-color: #333333;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      background-repeat: no-repeat;
+      background-position: left center;
+      padding-left: 40px;
+    }
+    
+    .upload-button:hover {
+      background-color: #555555;
+    }
+    
+    .upload-icon {
+      width: 30px;
+      height: 30px;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: px;
+    }
+    
+    .star-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      background: url('https://static.vecteezy.com/system/resources/previews/004/918/567/original/dark-blue-nebula-sparkle-purple-star-universe-in-outer-space-horizontal-galaxy-on-space-free-photo.jpg') center center fixed;
+      background-size: cover;
+      filter: brightness(40%);
     }
   </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-
 <body>
-  <div class="header">
-    <button class="back-button" onclick="window.location.href = 'https://lenn106.github.io'"></button>
-    <h1>GitHub Projects</h1>
-  </div>
-  <div class="container">
-    <div class="project">
-      <h2>NeoMenu</h2>
-      <p>A now patched i-Ready hack that I developed on my own. The only use of its repository today is for UI.</p>
-      <div>
-        <a href="https://github.com/Lenn106/NeoMenu" target="_blank">View on GitHub</a>
-        <a href="https://lenn106.github.io/NeoMenu" target="_blank">Project Website</a>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="project">
-      <h2>Hackwize</h2>
-      <p>A set of tools used to break and bypass Linewize for unrestricted computer access at school.</p>
-      <div>
-        <a href="https://github.com/Lenn106/Hackwize" target="_blank">View on GitHub</a>
-        <a href="https://lenn106.github.io/Hackwize" target="_blank">Project Website</a>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="project">
-      <h2>Edu News</h2>
-      <p>A unblocked games website similar to fishme.me. Click the word "problems" on article 1.</p>
-      <div>
-        <a href="https://github.com/Lenn106/Edu-News" target="_blank">View on GitHub</a>
-        <a href="https://lenn106.github.io/Edu-News" target="_blank">Project Website</a>
-      </div>
-    </div>
-  </div>
-</body>
+  <div class="star-background"></div>
 
+  <h1>Girl Screaming Original</h1>
+  
+  <div class="video-container">
+    <video class="video" controls>
+      <source src="https://github.com/Lenn106/GirlScreamMaker/raw/d16009379775cb514fb0de8deeb62667f34b84ae/Y2Mate.is%20-%20Lady%20screams%20goofy%20car%20horn-creY2UgJwqo-720p-1654270805125.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  
+  <h1>Girl Screaming Modified</h1>
+  <div class="video-container">
+    <video id="your-clip" class="video" controls>
+      <source src="placeholder" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="button-container">
+    <a href="#" download="your_clip.mp4">
+      <button class="btn"><i class="fa fa-download"></i> Download</button>
+    </a>
+    <input type="file" id="upload-input" style="display: none;">
+    <label for="upload-input" class="upload-button">
+      <img class="upload-icon" src="https://tinypic.host/images/2023/05/29/image-removebg-preview-3.png" alt="Upload Icon">
+      Upload Files
+    </label>
+  </div>
+
+  <script>
+    const yourClipVideo = document.getElementById("your-clip");
+    yourClipVideo.src = "your_clip_video_url_here";
+  </script>
+</body>
 </html>
