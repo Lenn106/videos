@@ -7,7 +7,22 @@
       text-align: center;
       font-family: Arial, sans-serif;
       background-color: #111111;
-      margin-top: 70px;
+      margin-top: 150px; /* Increased margin-top to accommodate the footer */
+    }
+    
+    /* Styles for the footer */
+    .footer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100px;
+      background-color: #333333;
+      color: #ffffff;
+      font-size: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     
     h1 {
@@ -86,6 +101,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+  <!-- Footer -->
+  <div class="footer">
+    <h2>Lenn106</h2>
+  </div>
+  
   <div class="star-background"></div>
   <div class="container">
     <div class="video-container">
@@ -93,7 +113,7 @@
       <iframe class="video" width="360" height="202" src="https://www.youtube.com/embed/UWnuxFD2NcQ" frameborder="0" allowfullscreen></iframe>
     </div>
     <div class="box">
-      <h1>How to Hack i-Ready</h1>
+      <h1>How Hack i-Ready</h1>
       <p>My first i-Ready tutorial on my channel. Has around 10k views as of May 29.</p>
       <div class="button-container">
         <a href="https://rr3---sn-4g5ednss.googlevideo.com/videoplayback?expire=1685409511&ei=h_p0ZIPjHZyi1gKb9YKIDQ&ip=154.194.9.1&id=o-APDVqgM-jNDpoRUCsJLmMwu8buZb0vz2Bmx_OPc890R5&itag=22&source=youtube&requiressl=yes&mh=55&mm=31%2C26&mn=sn-4g5ednss%2Csn-25ge7nsk&ms=au%2Conr&mv=m&mvi=3&pl=24&initcwndbps=326250&spc=qEK7ByV1CmWdECji-6kAh6ml0Su2-w4&vprv=1&svpuc=1&mime=video%2Fmp4&cnr=14&ratebypass=yes&dur=81.223&lmt=1681959246949597&mt=1685387570&fvip=1&fexp=24007246&c=ANDROID&txp=5318224&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRgIhANaP-0s7gYJ5YOmRWzCI5_EfsOZYpz6cpDDeYGWiGlE4AiEAtadFD5y0VGl8v-R3tW3kp1TMjGPu5EuG8pRBXTbUrlc%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AG3C_xAwRgIhAJKP6kw0MJ454tCGeHfFaVliF9BEjxBdWtI6LH_133J5AiEA1ypaZIqpDusGjqICmfQiLNS5FZpzuWoekFUMM-zYHBQ%3D&title=Download From Lenn106 Website%20-%20How%20To%20Hack%20i-Ready%202023%20WORKING%20(Nullify%20Got%20Deleted!)-UWnuxFD2NcQ-720p-1654286679989" download="How_Hack_i-Ready.mp4">
@@ -102,6 +122,41 @@
       </div>
     </div>
   </div>
+  
+  <div class="container">
+    <div class="video-container">
+      <video id="your-clip" class="video" controls>
+        <source src="placeholder" type="video/mp4">
+      </video>
+    </div>
+    <div class="box">
+      <h1>Video Title</h1>
+      <p>Add your description or content here.</p>
+      <div class="button-container">
+        <a href="#" download="your_clip.mp4">
+          <button class="btn"><i class="fa fa-download"></i> Download</button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="video-container">
+      <video id="your-clip" class="video" controls>
+        <source src="placeholder" type="video/mp4">
+      </video>
+    </div>
+    <div class="box">
+      <h1>Video Title</h1>
+      <p>Add your description or content here.</p>
+      <div class="button-container">
+        <a href="#" download="your_clip.mp4">
+          <button class="btn"><i class="fa fa-download"></i> Download</button>
+        </a>
+      </div>
+    </div>
+  </div>
+
   <div class="container">
     <div class="video-container">
       <video id="your-clip" class="video" controls>
@@ -120,9 +175,31 @@
   </div>
 
   <div class="button-container">
-    <a href="#" download="your_clip.mp4">
-      <button class="btn"><i class="fa fa-download"></i> Download</button>
+    <a id="download-all" href="#" download="Lenn106 Videos.zip">
+      <button class="btn"><i class="fa fa-download"></i> Download All</button>
     </a>
   </div>
+
+  <script>
+    document.getElementById('download-all').addEventListener('click', function() {
+      var zip = new JSZip();
+      
+      // Add videos to the zip file
+      zip.file('How_Hack_i-Ready.mp4', 'https://rr3---sn-4g5ednss.googlevideo.com/videoplayback?expire=1685409511&ei=h_p0ZIPjHZyi1gKb9YKIDQ&ip=154.194.9.1&id=o-APDVqgM-jNDpoRUCsJLmMwu8buZb0vz2Bmx_OPc890R5&itag=22&source=youtube&requiressl=yes&mh=55&mm=31%2C26&mn=sn-4g5ednss%2Csn-25ge7nsk&ms=au%2Conr&mv=m&mvi=3&pl=24&initcwndbps=326250&spc=qEK7ByV1CmWdECji-6kAh6ml0Su2-w4&vprv=1&svpuc=1&mime=video%2Fmp4&cnr=14&ratebypass=yes&dur=81.223&lmt=1681959246949597&mt=1685387570&fvip=1&fexp=24007246&c=ANDROID&txp=5318224&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRgIhANaP-0s7gYJ5YOmRWzCI5_EfsOZYpz6cpDDeYGWiGlE4AiEAtadFD5y0VGl8v-R3tW3kp1TMjGPu5EuG8pRBXTbUrlc%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AG3C_xAwRgIhAJKP6kw0MJ454tCGeHfFaVliF9BEjxBdWtI6LH_133J5AiEA1ypaZIqpDusGjqICmfQiLNS5FZpzuWoekFUMM-zYHBQ%3D&title=Download%20From%20Lenn106%20Website%20-%20How%20To%20Hack%20i-Ready%202023%20WORKING%20(Nullify%20Got%20Deleted!)-UWnuxFD2NcQ-720p-1654286679989');
+      zip.file('your_clip1.mp4', 'video_source1');
+      zip.file('your_clip2.mp4', 'video_source2');
+      zip.file('your_clip3.mp4', 'video_source3');
+      
+      // Generate the zip file
+      zip.generateAsync({ type: 'blob' })
+        .then(function(content) {
+          // Trigger the download
+          var downloadLink = document.createElement('a');
+          downloadLink.href = URL.createObjectURL(content);
+          downloadLink.download = 'Lenn106 Videos.zip';
+          downloadLink.click();
+        });
+    });
+  </script>
 </body>
 </html>
