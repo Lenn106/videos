@@ -9,7 +9,7 @@
       background-color: #111111;
       margin-top: 150px; /* Increased margin-top to accommodate the footer */
     }
-    
+
     /* Styles for the footer */
     .footer {
       position: fixed;
@@ -24,42 +24,43 @@
       align-items: center;
       justify-content: center;
     }
-    
+
     h1 {
       font-size: 24px;
       color: #ffffff;
       margin-bottom: 20px;
       text-align: center;
     }
-    
+
     .container {
       display: flex;
       justify-content: center;
       align-items: flex-start;
       margin-bottom: 40px;
+      flex-wrap: wrap;
     }
-    
+
     .video-container {
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-left: 20px;
+      margin: 20px;
     }
-    
+
     .video {
       width: 360px;
       height: 202px;
       border: 2px solid #ffffff;
       border-radius: 8px;
     }
-    
+
     .button-container {
       display: flex;
       justify-content: center;
       align-items: center;
       margin-top: 10px;
     }
-    
+
     .btn {
       display: inline-block;
       padding: 12px 24px;
@@ -72,21 +73,9 @@
       cursor: grabbing;
       transition: background-color 0.3s ease;
     }
-    
+
     .btn:hover {
       background-color: #555555;
-    }
-  
-    .star-background {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: -1;
-      background: url('https://images.unsplash.com/photo-1499623838158-29acea518eaa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80') center center fixed;
-      background-size: cover;
-      filter: brightness(40%);
     }
 
     .box {
@@ -97,6 +86,31 @@
       color: #ffffff;
       text-align: left;
     }
+
+    /* Styles for particles */
+    #particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    /* New class for aligning single video to the left */
+    .align-left {
+      justify-content: flex-start;
+    }
+
+    /* Style for back button */
+    .back-button {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: #ffffff;
+      font-size: 24px;
+      cursor: pointer;
+    }
   </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -105,101 +119,163 @@
   <div class="footer">
     <h2>Lenn106</h2>
   </div>
-  
-  <div class="star-background"></div>
+
+  <!-- Back Button -->
+  <a class="back-button" onclick="goBack()"><i class="fa fa-arrow-left"></i> Back</a>
+
   <div class="container">
     <div class="video-container">
       <!-- YouTube embed code -->
       <iframe class="video" width="360" height="202" src="https://www.youtube.com/embed/UWnuxFD2NcQ" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <div class="box">
-      <h1>How Hack i-Ready</h1>
-      <p>My first i-Ready tutorial on my channel. Has around 10k views as of May 29.</p>
       <div class="button-container">
-        <a href="https://rr3---sn-4g5ednss.googlevideo.com/videoplayback?expire=1685409511&ei=h_p0ZIPjHZyi1gKb9YKIDQ&ip=154.194.9.1&id=o-APDVqgM-jNDpoRUCsJLmMwu8buZb0vz2Bmx_OPc890R5&itag=22&source=youtube&requiressl=yes&mh=55&mm=31%2C26&mn=sn-4g5ednss%2Csn-25ge7nsk&ms=au%2Conr&mv=m&mvi=3&pl=24&initcwndbps=326250&spc=qEK7ByV1CmWdECji-6kAh6ml0Su2-w4&vprv=1&svpuc=1&mime=video%2Fmp4&cnr=14&ratebypass=yes&dur=81.223&lmt=1681959246949597&mt=1685387570&fvip=1&fexp=24007246&c=ANDROID&txp=5318224&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRgIhANaP-0s7gYJ5YOmRWzCI5_EfsOZYpz6cpDDeYGWiGlE4AiEAtadFD5y0VGl8v-R3tW3kp1TMjGPu5EuG8pRBXTbUrlc%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AG3C_xAwRgIhAJKP6kw0MJ454tCGeHfFaVliF9BEjxBdWtI6LH_133J5AiEA1ypaZIqpDusGjqICmfQiLNS5FZpzuWoekFUMM-zYHBQ%3D&title=Download From Lenn106 Website%20-%20How%20To%20Hack%20i-Ready%202023%20WORKING%20(Nullify%20Got%20Deleted!)-UWnuxFD2NcQ-720p-1654286679989" download="How_Hack_i-Ready.mp4">
-          <button class="btn"><i class="fa fa-download"></i> Download</button>
-        </a>
       </div>
     </div>
-  </div>
-  
-  <div class="container">
     <div class="video-container">
-      <video id="your-clip" class="video" controls>
-        <source src="placeholder" type="video/mp4">
-      </video>
-    </div>
-    <div class="box">
-      <h1>Video Title</h1>
-      <p>Add your description or content here.</p>
+      <!-- YouTube embed code -->
+      <iframe class="video" width="360" height="202" src="https://www.youtube.com/embed/13_jPWqCkyo" frameborder="0" allowfullscreen></iframe>
       <div class="button-container">
-        <a href="#" download="your_clip.mp4">
-          <button class="btn"><i class="fa fa-download"></i> Download</button>
-        </a>
       </div>
     </div>
-  </div>
-
-  <div class="container">
+    <div class="video-container align-left">
+      <!-- YouTube embed code -->
+      <iframe class="video" width="360" height="202" src="https://www.youtube.com/embed/deFT3gpXfAk" frameborder="0" allowfullscreen></iframe>
+      <div class="button-container">
+      </div>
+    </div>
     <div class="video-container">
-      <video id="your-clip" class="video" controls>
-        <source src="placeholder" type="video/mp4">
-      </video>
-    </div>
-    <div class="box">
-      <h1>Video Title</h1>
-      <p>Add your description or content here.</p>
+      <!-- YouTube embed code -->
+      <iframe class="video" width="360" height="202" src="https://www.youtube.com/embed/1jdvQ1v-3XI" frameborder="0" allowfullscreen></iframe>
       <div class="button-container">
-        <a href="#" download="your_clip.mp4">
-          <button class="btn"><i class="fa fa-download"></i> Download</button>
-        </a>
       </div>
     </div>
-  </div>
-
-  <div class="container">
     <div class="video-container">
-      <video id="your-clip" class="video" controls>
-        <source src="placeholder" type="video/mp4">
-      </video>
-    </div>
-    <div class="box">
-      <h1>Video Title</h1>
-      <p>Add your description or content here.</p>
+      <!-- YouTube embed code -->
+      <iframe class="video" width="360" height="202" src="https://www.youtube.com/embed/IZz63tdS2Eo" frameborder="0" allowfullscreen></iframe>
       <div class="button-container">
-        <a href="#" download="your_clip.mp4">
-          <button class="btn"><i class="fa fa-download"></i> Download</button>
-        </a>
       </div>
     </div>
   </div>
 
-  <div class="button-container">
-    <a id="download-all" href="#" download="Lenn106 Videos.zip">
-      <button class="btn"><i class="fa fa-download"></i> Download All</button>
-    </a>
-  </div>
+  <!-- Particle Container -->
+  <div id="particles-js"></div>
 
+  <!-- Particle Script -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script>
-    document.getElementById('download-all').addEventListener('click', function() {
-      var zip = new JSZip();
-      
-      // Add videos to the zip file
-      zip.file('How_Hack_i-Ready.mp4', 'https://rr3---sn-4g5ednss.googlevideo.com/videoplayback?expire=1685409511&ei=h_p0ZIPjHZyi1gKb9YKIDQ&ip=154.194.9.1&id=o-APDVqgM-jNDpoRUCsJLmMwu8buZb0vz2Bmx_OPc890R5&itag=22&source=youtube&requiressl=yes&mh=55&mm=31%2C26&mn=sn-4g5ednss%2Csn-25ge7nsk&ms=au%2Conr&mv=m&mvi=3&pl=24&initcwndbps=326250&spc=qEK7ByV1CmWdECji-6kAh6ml0Su2-w4&vprv=1&svpuc=1&mime=video%2Fmp4&cnr=14&ratebypass=yes&dur=81.223&lmt=1681959246949597&mt=1685387570&fvip=1&fexp=24007246&c=ANDROID&txp=5318224&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRgIhANaP-0s7gYJ5YOmRWzCI5_EfsOZYpz6cpDDeYGWiGlE4AiEAtadFD5y0VGl8v-R3tW3kp1TMjGPu5EuG8pRBXTbUrlc%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AG3C_xAwRgIhAJKP6kw0MJ454tCGeHfFaVliF9BEjxBdWtI6LH_133J5AiEA1ypaZIqpDusGjqICmfQiLNS5FZpzuWoekFUMM-zYHBQ%3D&title=Download%20From%20Lenn106%20Website%20-%20How%20To%20Hack%20i-Ready%202023%20WORKING%20(Nullify%20Got%20Deleted!)-UWnuxFD2NcQ-720p-1654286679989');
-      zip.file('your_clip1.mp4', 'video_source1');
-      zip.file('your_clip2.mp4', 'video_source2');
-      zip.file('your_clip3.mp4', 'video_source3');
-      
-      // Generate the zip file
-      zip.generateAsync({ type: 'blob' })
-        .then(function(content) {
-          // Trigger the download
-          var downloadLink = document.createElement('a');
-          downloadLink.href = URL.createObjectURL(content);
-          downloadLink.download = 'Lenn106 Videos.zip';
-          downloadLink.click();
-        });
+    particlesJS("particles-js", {
+      particles: {
+        number: {
+          value: 50,
+          density: {
+            enable: true,
+            value_area: 800
+          }
+        },
+        color: {
+          value: "#ffffff"
+        },
+        shape: {
+          type: "circle",
+          stroke: {
+            width: 0,
+            color: "#000000"
+          },
+          polygon: {
+            nb_sides: 5
+          },
+          image: {
+            src: "img/github.svg",
+            width: 100,
+            height: 100
+          }
+        },
+        opacity: {
+          value: 0.5,
+          random: false,
+          anim: {
+            enable: false,
+            speed: 1,
+            opacity_min: 0.1,
+            sync: false
+          }
+        },
+        size: {
+          value: 3,
+          random: true,
+          anim: {
+            enable: false,
+            speed: 40,
+            size_min: 0.1,
+            sync: false
+          }
+        },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#ffffff",
+          opacity: 0.4,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 6,
+          direction: "none",
+          random: false,
+          straight: false,
+          out_mode: "out",
+          bounce: false,
+          attract: {
+            enable: false,
+            rotateX: 600,
+            rotateY: 1200
+          }
+        }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: {
+            enable: false,
+            mode: "repulse"
+          },
+          onclick: {
+            enable: false,
+            mode: "push"
+          },
+          resize: true
+        },
+        modes: {
+          grab: {
+            distance: 400,
+            line_linked: {
+              opacity: 1
+            }
+          },
+          bubble: {
+            distance: 400,
+            size: 40,
+            duration: 2,
+            opacity: 8,
+            speed: 3
+          },
+          repulse: {
+            distance: 200
+          },
+          push: {
+            particles_nb: 4
+          },
+          remove: {
+            particles_nb: 2
+          }
+        }
+      },
+      retina_detect: true
     });
+
+    // Function to go back
+    function goBack() {
+      window.history.back();
+    }
   </script>
 </body>
 </html>
